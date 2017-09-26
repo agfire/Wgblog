@@ -6,19 +6,17 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   
-  <title>Wg-blog</title>
+  <title>背景渐变文字效果 | Wg-blog</title>
   <meta name="author" content="wg">
   
-  <meta name="description" content="title:背景渐变文字效果
-
-#动态渐变文字
-##1. 舞动文字  舞动文字从表面来看，1要文字颜色有渐变效果2最好该渐变效果是动态变化的。其实归结到前端语言里（不是代码，还是汉语）就是一句话：文字透明+背景渐变+只覆盖文字+animation。
-1&amp;lt;span&amp;gt;汉仪长宋简&amp;lt;/sp">
+  <meta name="description" content="动态渐变文字##1. 舞动文字  舞动文字从表面来看，1要文字颜色有渐变效果2最好该渐变效果是动态变化的。其实归结到前端语言里（不是代码，还是汉语）就是一句话：文字透明+背景渐变+只覆盖文字+animation。
+1&amp;lt;span&amp;gt;汉仪长宋简&amp;lt;/span&amp;gt;
+css12345678">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="背景渐变文字效果"/>
   <meta property="og:site_name" content="Wg-blog"/>
 
   
@@ -122,7 +120,7 @@ var _hmt = _hmt || [];
 
 	
 		<div class="page-header">
-			<h1> </h1>
+			<h1> 背景渐变文字效果</h1>
 		</div>
 	
 
@@ -139,16 +137,11 @@ var _hmt = _hmt || [];
 	<div class="mypage">		
 	  		
 
-	  <hr>
-<p>title:背景渐变文字效果</p>
-<hr>
-<p>#动态渐变文字</p>
-<p>##1. 舞动文字<br>  舞动文字从表面来看，1要文字颜色有渐变效果2最好该渐变效果是动态变化的。其实归结到前端语言里（不是代码，还是汉语）就是一句话：文字透明+背景渐变+只覆盖文字+animation。</p>
+	  <h1 id="动态渐变文字"><a href="#动态渐变文字" class="headerlink" title="动态渐变文字"></a>动态渐变文字</h1><p>##1. 舞动文字<br>  舞动文字从表面来看，1要文字颜色有渐变效果2最好该渐变效果是动态变化的。其实归结到前端语言里（不是代码，还是汉语）就是一句话：文字透明+背景渐变+只覆盖文字+animation。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;span&gt;汉仪长宋简&lt;<span class="regexp">/span&gt;</span></div></pre></td></tr></table></figure>
-<p>###css<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">span&#123;</div><div class="line"> font-size: <span class="number">3</span>em;</div><div class="line">  color:transparent;</div><div class="line">  background-image: -webkit-linear-gradient(left, red, green <span class="number">40</span>%,orange <span class="number">75</span>%, red <span class="number">100</span>%);</div><div class="line">  -webkit-background-clip: text;</div><div class="line">  background-size: <span class="number">200</span>% <span class="number">100</span>%;</div><div class="line">  animation: vary <span class="number">2</span>s infinite ease-<span class="keyword">in</span>-out;</div><div class="line"></div><div class="line">&#125;  </div><div class="line">@keyframes vary&#123;</div><div class="line">  <span class="number">0</span>%&#123;background-position: <span class="number">0</span>;&#125;</div><div class="line">  <span class="number">100</span>%&#123;background-position: <span class="number">-100</span>%;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>###效果：<br><img src="mahua-logo.jpg" alt="x"></p>
-<p>###这其实是会变的，由于截图没发现时动态变化。您可以亲自尝试一下。</p>
-<p>##2.注意<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">color:transparent;</div><div class="line">background-image: -webkit-linear-gradient(left, red, green <span class="number">40</span>%,orange <span class="number">75</span>%, red <span class="number">100</span>%);</div><div class="line">-webkit-background-clip: text;</div></pre></td></tr></table></figure></p>
+<h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">span&#123;</div><div class="line"> font-size: <span class="number">3</span>em;</div><div class="line">  color:transparent;</div><div class="line">  background-image: -webkit-linear-gradient(left, red, green <span class="number">40</span>%,orange <span class="number">75</span>%, red <span class="number">100</span>%);</div><div class="line">  -webkit-background-clip: text;</div><div class="line">  background-size: <span class="number">200</span>% <span class="number">100</span>%;</div><div class="line">  animation: vary <span class="number">2</span>s infinite ease-<span class="keyword">in</span>-out;</div><div class="line"></div><div class="line">&#125;  </div><div class="line">@keyframes vary&#123;</div><div class="line">  <span class="number">0</span>%&#123;background-position: <span class="number">0</span>;&#125;</div><div class="line">  <span class="number">100</span>%&#123;background-position: <span class="number">-100</span>%;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h3><p><img src="mahua-logo.jpg" alt="x"></p>
+<h3 id="这其实是会变的，由于截图没发现时动态变化。您可以亲自尝试一下。"><a href="#这其实是会变的，由于截图没发现时动态变化。您可以亲自尝试一下。" class="headerlink" title="这其实是会变的，由于截图没发现时动态变化。您可以亲自尝试一下。"></a>这其实是会变的，由于截图没发现时动态变化。您可以亲自尝试一下。</h3><h2 id="2-注意"><a href="#2-注意" class="headerlink" title="2.注意"></a>2.注意</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">color:transparent;</div><div class="line">background-image: -webkit-linear-gradient(left, red, green <span class="number">40</span>%,orange <span class="number">75</span>%, red <span class="number">100</span>%);</div><div class="line">-webkit-background-clip: text;</div></pre></td></tr></table></figure>
 <p>文字渐变靠着三行。将背景用渐变颜色取代，然后背景只覆盖文字内容，那么文字颜色设为透明后，就以背景颜色呈现。此时还没发动态变化。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">  ackground-size: <span class="number">200</span>% <span class="number">100</span>%;</div><div class="line">  animation: vary <span class="number">2</span>s infinite ease-<span class="keyword">in</span>-out;</div><div class="line">@keyframes vary&#123;</div><div class="line">  <span class="number">0</span>%&#123;background-position: <span class="number">0</span>;&#125;</div><div class="line">  <span class="number">100</span>%&#123;background-position: <span class="number">-100</span>%;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>background-size: 200% 100%;是为了让背景有流动空间。然后设置animation动画，变化背景位置，此时看见的文字便是动态流动的。</p>
 	  
@@ -160,12 +153,12 @@ var _hmt = _hmt || [];
 
     
     
-    <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>Prev</a>
+    <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>上一頁</a>
     
 
     <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
     
-    <a href="/2017/09/05/blog/" type="button" class="btn btn-default ">Next<i
+    <a href="/2017/09/05/blog/" type="button" class="btn btn-default ">下一頁<i
                 class="fa fa-arrow-circle-o-right"></i></a>
     
 
@@ -178,7 +171,7 @@ var _hmt = _hmt || [];
 	<!-- comment -->
 	
 <section id="comment">
-    <h2 class="title">Comments</h2>
+    <h2 class="title">留言</h2>
 
     
 </section>
