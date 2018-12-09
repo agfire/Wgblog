@@ -136,6 +136,46 @@ var _hmt = _hmt || [];
 <div class="row">
 	<div class="col-md-8">
 		<h3 class="title">
+			<a href="/2018/12/09/JS划重点——类和对象/" ></a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-12-09  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<hr>
+<h2 id="JS���ص㡪�����Ͷ����Ĳ���������"><a href="#JS���ص㡪�����Ͷ����Ĳ���������" class="headerlink" title="JS���ص㡪�����Ͷ����Ĳ���������"></a>JS���ص㡪�����Ͷ����Ĳ���������</h2><p>/<em>��JS �����溯��Ҳ��һ����������ôҪ����һ����������Ҫһ���࣬������������������ţ�ƵĶ���-������ʵ��</em>/<br>/<em>���������޴��ڶ����� <strong>����ģʽ</strong>������һ��</em>/</p>
+<figure class="highlight plain"><figcaption><span>creates(name,sex,age,b) &#123;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">	var  w = new  Object;</div><div class="line">	w.name = name;</div><div class="line">	w.sex = sex;</div><div class="line">	w.age = age;</div><div class="line">	w.single = b;</div><div class="line">	w.show = function()&#123;</div><div class="line">		for (prop in w) &#123;</div><div class="line">			console.log(&quot;w.&quot; + prop + &quot; = &quot; + w[prop]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return w ;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var w1 = creates(&apos;����&apos;,&apos;��&apos;,21,true)</div><div class="line">var w2 = creates(&apos;����&apos;,&apos;��&apos;,20,false)</div><div class="line">w1.show()</div><div class="line">w2.show()</div></pre></td></tr></table></figure>
+<p><img src="img/����t.png" alt="x"><br>/<em>���ַ�ʽ�����Ķ����ܲ��ã�ÿ��ִ�ж�����һ��show��������������������д�������Ը�show����������</em>/</p>
+<figure class="highlight plain"><figcaption><span>showinfor()&#123;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">		for (prop in this) &#123;</div><div class="line">			console.log(this+&quot;.&quot; + prop + &quot; = &quot; + this[prop]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line"></div><div class="line">function creates(name,sex,age,b) &#123;</div><div class="line">	var  w = new  Object;</div><div class="line">	w.name = name;</div><div class="line">	w.sex = sex;</div><div class="line">	w.age = age;</div><div class="line">	w.single = b;</div><div class="line">	w.show = showinfor</div><div class="line">	return w ;</div><div class="line">&#125;</div><div class="line">var w1 = creates(&apos;����&apos;,&apos;��&apos;,21,true)</div><div class="line">var w2 = creates(&apos;����&apos;,&apos;��&apos;,20,false)</div><div class="line">w2.show()</div><div class="line">w1.show()</div></pre></td></tr></table></figure>
+<p><img src="img/����.png" alt="x"><br>/<em>�����������ر���Ť������show����һ��Ҳ�����Ƕ��������������ķ��������ͳ�����JS�Ĺ��캯��������</em>/</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function creatW(name,sex,age,b) &#123;</div><div class="line">	this.name = name;</div><div class="line">	this.sex = sex;</div><div class="line">	this.age = age;</div><div class="line">	this.single = b;</div><div class="line">	this.show = function()&#123;</div><div class="line">		alert(this.name+&quot;ʹ���˹��캯������������&quot;)</div><div class="line">	&#125;;</div><div class="line">	</div><div class="line">&#125;</div><div class="line">var w1 = new creatW(&apos;����&apos;,&apos;��&apos;,21,true)</div><div class="line">w1.show()</div></pre></td></tr></table></figure>
+<p>/<em>���ڿ�����new �����������������ˣ������õ���this������Ҫreturn������but �������ַ�ʽÿ��������shou����Ҳ�ǲ�ͬ�ĺ͹���ģʽͬ����ĸ</em>/<br><img src="img/���캯��.png" alt="x"><br>/<em>��������ԭ�ͷ�ʽ����</em>/</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function w () &#123;</div><div class="line">	</div><div class="line">&#125;</div><div class="line">w.prototype.name=&apos;����&apos;</div><div class="line">w.prototype.sex=&apos;��&apos;</div><div class="line">w.prototype.show=function()&#123;</div><div class="line">	alert(this.name+&apos;ʹ����ԭ�ʹ�������&apos;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">var w1 = new w()</div><div class="line">w1.show()</div></pre></td></tr></table></figure>
+<p><img src="img/ԭ��.png" alt="x"><br>/<em>���ַ�ʽÿ�����������Ķ��󶼻ṫ�����������Ժͷ���������ʹ�����ַ�ʽ���ܸ�������������ʼ�����������Թ�����ԭ��ģʽ����</em>/</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function w (name,sex,age,b) &#123;</div><div class="line">	this.name = name;</div><div class="line">	this.sex = sex;</div><div class="line">	this.age = age;</div><div class="line">	this.single = b;</div><div class="line">&#125;</div><div class="line"></div><div class="line">w.prototype.show=function()&#123;</div><div class="line">	alert(this.name+&apos;ʹ���˹�����ԭ�ʹ�������&apos;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">var w1 = new w(&apos;����&apos;,&apos;��&apos;,21,true)</div><div class="line">w1.show()</div></pre></td></tr></table></figure>
+<p><img src="img/������ԭ��.png" alt="x"><br>/<em>���ַ�ʽ��Ŀǰ�����л�ӭ�Ĵ��������ķ�ʽ֮һ������һ�ֶ�̬ԭ�ʹ���ģʽ</em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function w (name,sex,age,b) &#123;</div><div class="line">	this.name = name;</div><div class="line">	this.sex = sex;</div><div class="line">	this.age = age;</div><div class="line">	this.single = b;</div><div class="line">	if(typeof w._initialized == &apos;undefined&apos;)&#123;</div><div class="line">		w.prototype.show=function()&#123;</div><div class="line">			alert(this.name+&apos;ʹ���˶�̬ԭ�ʹ�������&apos;)</div><div class="line">		&#125;</div><div class="line">        w._initialized=true</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var w1 = new w(&apos;����&apos;,&apos;��&apos;,21,true)</div><div class="line">w1.show()</div><div class="line">var w2 = new w(&apos;����&apos;,&apos;��&apos;,21,true)</div><div class="line">w2.show()</div></pre></td></tr></table></figure></p>
+<p><img src="img/��̬ԭ��.png" alt="x"><br>/<em>initialized�ж��Ƿ����Ѿ���ԭ�͸������κη�������û�оʹ�����Ȼ����ֵΪtrue,֮���Ͳ��ᴴ��show����</em>/</p>
+
+	
+	</div>
+  <a type="button" href="/2018/12/09/JS划重点——类和对象/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
 			<a href="/2018/03/04/grid/" >CSS Grid布局入门第一篇</a>
 		</h3>
 		</div>
@@ -162,7 +202,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2018/03/04/grid/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2018/03/04/grid/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 		
@@ -196,7 +236,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2017/10/03/csstext/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2017/10/03/csstext/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 		
@@ -235,7 +275,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2017/09/05/blog/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2017/09/05/blog/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 		
@@ -271,7 +311,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2017/09/05/hello-world/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2017/09/05/hello-world/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 		
@@ -300,7 +340,7 @@ var _hmt = _hmt || [];
 			
   <div id="site_search">
    <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
    </div>  
   <div id="local-search-result"></div>
   </div>
@@ -314,8 +354,12 @@ var _hmt = _hmt || [];
 		
 			
 <div class="widget">
-  <h4>Recent Posts</h4>
+  <h4>最新文章</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2018/12/09/JS划重点——类和对象/" ><i class="fa fa-file-o"></i></a>
+      </li>
     
       <li>
         <a href="/2018/03/04/grid/" ><i class="fa fa-file-o"></i>CSS Grid布局入门第一篇</a>
@@ -339,7 +383,7 @@ var _hmt = _hmt || [];
 		
 			
 <div class="widget">
-	<h4>Links</h4>
+	<h4>链接</h4>
 	<ul class="blogroll list-unstyled">
 	
 		<li><i class="fa fa-github"></i><a href="http://htmlpreview.github.io/?https://github.com/agfire/-/blob/master/xxoo/index.html" title="" target="_blank"]);">厉害了 大招？</a></li>
